@@ -1,0 +1,7 @@
+{
+  "name": "HelpCovid",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

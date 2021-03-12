@@ -1,0 +1,43 @@
+<ion-content style="text-align: center; font-size: 20px;">
+  <ion-card style="background-color: antiquewhite; color: red;">
+    <ion-title>REGISTRO DE NUEVO USUARIO</ion-title>
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-input [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido:</ion-label>
+      <ion-input [(ngModel)]="apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Edad:</ion-label>
+      <ion-input [(ngModel)]="edad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>DNI:</ion-label>
+      <ion-input [(ngModel)]="dni"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Telefono:</ion-label>
+      <ion-input [(ngModel)]="telefono"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Localidad:</ion-label>
+      <ion-input [(ngModel)]="localidad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Comunidad Autonoma</ion-label>
+      <ion-select>
+        <ion-select-option *ngFor="let item of this.listaComunidades" value={{item}}>{{item}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Estado</ion-label>
+      <ion-select>
+        <ion-select-option value=01>Voluntario</ion-select-option>
+        <ion-select-option value=02>Necesitado</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button (click)="addUsuario()">Registrar usuario</ion-button>
+  </ion-card>
+</ion-content>
